@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="src.controller.DashboardController" >
+
+    <children>
+        <VBox spacing="10" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" >
+
+            <HBox spacing="15" style="-fx-padding: 10;">
+                <Label text="Select Location:"/>
+                <ComboBox fx:id="locationComboBox" prefWidth="200"/>
+                <Button fx:id="refreshButton" text="Refresh" onAction="#onRefreshClicked"/>
+            </HBox>
+
+            <SplitPane dividerPositions="0.5" prefHeight="600" prefWidth="950" >
+
+                <VBox spacing="10" >
+
+                    <TitledPane text="Fish Market Prices" expanded="true" prefHeight="300" prefWidth="400">
+                        <content>
+                            <TableView fx:id="fishPriceTable" prefHeight="280" prefWidth="400">
+                                <columns>
+                                    <TableColumn fx:id="speciesColumn" text="Species" prefWidth="120"/>
+                                    <TableColumn fx:id="priceColumn" text="Price (LKR/kg)" prefWidth="100"/>
+                                    <TableColumn fx:id="locationColumn" text="Location" prefWidth="100"/>
+                                    <TableColumn fx:id="timestampColumn" text="Timestamp" prefWidth="150"/>
+                                </columns>
+                            </TableView>
+                        </content>
+                    </TitledPane>
+
+                    <TitledPane text="Weather Updates" expanded="true" prefHeight="280" prefWidth="400">
+                        <content>
+                            <VBox spacing="5" style="-fx-padding: 10;">
+
+                                <HBox spacing="20">
+                                    <Label text="Location:"/>
+                                    <Label fx:id="weatherLocationLabel" text="-" prefWidth="150"/>
+                                </HBox>
+
+                                <HBox spacing="20">
+                                    <Label text="Temperature:"/>
+                                    <Label fx:id="weatherTempLabel" text="-"/>
+                                </HBox>
+
+                                <HBox spacing="20">
+                                    <Label text="Humidity:"/>
+                                    <Label fx:id="weatherHumidityLabel" text="-"/>
+                                </HBox>
+
+                                <HBox spacing="20">
+                                    <Label text="Wind Speed:"/>
+                                    <Label fx:id="weatherWindLabel" text="-"/>
+                                </HBox>
+
+                                <HBox spacing="20">
+                                    <Label text="Description:"/>
+                                    <Label fx:id="weatherDescLabel" text="-"/>
+                                </HBox>
+
+                                <Label fx:id="weatherAlertLabel" textFill="red" style="-fx-font-weight: bold;"/>
+
+                            </VBox>
+                        </content>
+                    </TitledPane>
+
+                </VBox>
+
+                <TitledPane text="Fish Distribution Map" expanded="true" prefHeight="600" prefWidth="500">
+                    <content>
+                        <WebView fx:id="distributionMapView" prefHeight="600" prefWidth="500"/>
+                    </content>
+                </TitledPane>
+
+            </SplitPane>
+        </VBox>
+    </children>
+</AnchorPane>

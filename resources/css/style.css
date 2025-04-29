@@ -1,0 +1,59 @@
+.root {
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-background-color: #f5f9f9;
+    -fx-font-size: 14px;
+}
+
+.top-bar {
+    -fx-background-color: #004a99;
+    -fx-padding: 12 15 12 15;
+}
+
+.app-title {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dcdcdc;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #007acc;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: #007acc;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #005f99;
+}
+
+.text-area, .text-field, .combo-box {
+    -fx-border-color: #dcdcdc;
+    -fx-background-color: white;
+}
+
+/* ScrollPane styling */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+/* Chat ListView styling */
+.list-view {
+    -fx-background-color: white;
+}
+
+/* Disable send button by opacity */
+.button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}

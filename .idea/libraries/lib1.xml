@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../openjfx-17.0.15_windows-x64_bin-sdk/javafx-sdk-17.0.15/lib" />
+      <root url="jar://$PROJECT_DIR$/../jbcrypt-0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../openjfx-17.0.15_windows-x64_bin-sdk/javafx-sdk-17.0.15/lib" recursive="false" />
+  </library>
+</component>

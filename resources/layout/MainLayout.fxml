@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="src.MainApp">
+
+    <top>
+        <HBox styleClass="top-bar" spacing="10" padding="10">
+            <Label text="Smart Fisheries Management System" styleClass="app-title"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TabPane fx:id="mainTabPane">
+
+            <Tab text="Dashboard" closable="false">
+                <fx:include source="/layout/DashboardView.fxml"/>
+            </Tab>
+
+            <Tab text="Chat" closable="false">
+                <fx:include source="/layout/ChatView.fxml"/>
+            </Tab>
+
+            <Tab text="Species Classifier" closable="false">
+                <fx:include source="/layout/SpeciesClassifierView.fxml"/>
+            </Tab>
+
+            <Tab text="Settings" closable="false">
+                <HBox alignment="center" style="-fx-padding: 20;">
+                    <Label text="Settings Feature Coming Soon."/>
+                </HBox>
+            </Tab>
+
+        </TabPane>
+    </center>
+
+</BorderPane>

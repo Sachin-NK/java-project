@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="src.controller.ChatController">
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <ListView fx:id="chatListView" prefHeight="450" style="-fx-font-size: 14px;"/>
+
+            <HBox spacing="10" alignment="center_left">
+                <TextArea fx:id="messageInputArea" prefHeight="60" prefWidth="600" wrapText="true" promptText="Enter message..."/>
+                <Button fx:id="sendButton" text="Send" prefWidth="80"/>
+            </HBox>
+
+            <CheckBox fx:id="chatbotToggle" text="Enable Chatbot Assistance" selected="true"/>
+        </VBox>
+    </center>
+
+</BorderPane>
